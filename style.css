@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding-top: 40px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+
+  font-family: Arial;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: black;
+}
+
+
+h1 { font-size: 42px;   /* 👈 mundu 55px undi, ippudu taggincham */
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 26px;          
+  line-height: 2;           
+  max-width: 900px;
+  text-align: left;
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Page 2 Layout */
+.container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+/* Video center */
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  border-radius: 15px;
+}
+
+/* Images common */
+.img {
+  position: absolute;
+  width: 120px;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Positions */
+.img1 { top: 10px; left: 10px; animation-delay: 1s; }
+.img2 { top: 10px; right: 10px; animation-delay: 2s; }
+.img3 { bottom: 10px; left: 10px; animation-delay: 3s; }
+.img4 { bottom: 10px; right: 10px; animation-delay: 4s; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Second layer images (beside corners) */
+
+/* Top left inner */
+.img5 { 
+  top: 80px; 
+  left: 150px; 
+  animation-delay: 5s; 
+}
+
+/* Top right inner */
+.img6 { 
+  top: 80px; 
+  right: 150px; 
+  animation-delay: 6s; 
+}
+
+/* Bottom left inner */
+.img7 { 
+  bottom: 80px; 
+  left: 150px; 
+  animation-delay: 7s; 
+}
+
+/* Bottom right inner */
+.img8 { 
+  bottom: 80px; 
+  right: 150px; 
+  animation-delay: 8s; 
+}
+
+/* Top bar layout */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+/* Left text */
+.left-text {
+  font-size: 35px;
+  color: white;
+}
+
+/* Right text */
+.right-text {
+  font-size: 28px;
+  color: white;
+  opacity: 0.8;
+}
+/* 📱 Mobile View Fix */
+@media (max-width: 768px) {
+
+  .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Video top lo center */
+  .video {
+    position: relative;
+    width: 90%;
+    margin: 20px 0;
+    transform: none;
+  }
+
+  /* Images grid style */
+  .img {
+    position: relative;
+    width: 40%;
+    margin: 10px;
+    opacity: 1;
+    animation: none; /* animation remove for clarity */
+  }
+
+  /* Arrange images nicely */
+  .container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Top bar adjust */
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-text {
+    margin-top: 5px;
+  }
+}
+/* Bottom right button */
+.next-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  padding: 12px 25px;
+  background: white;
+  color: #ff4d6d;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Page 3 text */
+#typing-text {
+  font-size: 26px;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.8;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Surprise text */
+#surprise h2 {
+  color: yellow;
+  font-size: 28px;
+}
+#tapText {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+} 

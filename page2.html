@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <h1 class="left-text">Our Memories 💖</h1>
+  <h1 class="right-text">#clgmemories😘🫂</h1>
+</div>
+
+<div class="container">
+
+  <!-- Images -->
+  <img src="Abhi1.jpeg" class="img img1">
+  <img src="Abhi2.jpeg" class="img img2">
+  <img src="Abhi3.jpeg" class="img img3">
+  <img src="Abhi4.jpeg" class="img img4">
+  <img src="Abhi5.jpeg" class="img img5">
+  <img src="Abhi6.jpeg" class="img img6">
+
+  <!-- Center Video -->
+  <video autoplay loop playsinline class="video">
+    <source src="Abhiv.mp4" type="video/mp4">
+  </video>
+</div>
+<script>
+document.body.addEventListener("click", function() {
+  var vid = document.getElementById("myVideo");
+  vid.muted = false;
+  vid.play();
+
+  document.getElementById("tapText").style.display = "none";
+});
+</script>
+<br>
+
+<button class="next-btn" onclick="nextPage()">Next ➡️</button>
+
+<script>
+function nextPage() {
+  window.location.href = "page3.html";
+}
+</script>
+</body>
+</html>

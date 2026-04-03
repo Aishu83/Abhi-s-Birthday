@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Just for You 💖</h1>
+
+<p id="typing-text"></p>
+
+<button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+<!-- Hidden message -->
+<div id="surprise" style="display:none; margin-top:20px;">
+  <h2>You mean a lot to me 🥺💞</h2>
+</div>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="Abhia.mpeg" type="audio/mp3">
+</audio>
+
+<script>
+const text = "I may not always express everything perfectly but every moment, every memory, every little effort you saw in this... it all comes from a place that truly cares for you 💜✨ You are special, more than you realize, and I just wanted to make you feel that today😩🙈";
+
+let i = 0;
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing-text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 40);
+  }
+}
+typing();
+
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
